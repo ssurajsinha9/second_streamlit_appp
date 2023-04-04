@@ -51,7 +51,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
-#streamlit.stop()
+streamlit.stop()
 
 
 
@@ -80,4 +80,3 @@ if streamlit.button('Add a Fruit to the List'):
     streamlit.text(back_from_function)
     
 streamlit.write('Thanks for adding ', add_my_fruit)
-
